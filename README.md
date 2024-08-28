@@ -41,3 +41,45 @@ python find_unfollowers.py
 ```
 
 The script will output the list of unfollowers along with their user IDs and the total count of unfollowers.
+
+## 中文
+
+### 说明
+
+此脚本帮助你查找所有在小红书上取关你的用户。具体过程包括访问网页版小红书的通知界面，通过Chrome的开发者工具复制相关HTML代码并将其保存在本地。脚本会处理该HTML文件，识别并列出所有取关你的用户。
+
+### 工作原理
+
+1. **访问小红书网页通知**:
+   - 打开网页版小红书，导航至**通知**部分，选择“新增关注”标签。
+
+2. **复制HTML代码**:
+   - 打开Chrome开发者工具（按`F12`或`Ctrl` + `Shift` + `I`）。
+   - 找到` <div class="tabs-content-container"> `下的通知相关HTML代码。
+   - 将此部分HTML内容全部复制并保存为本地的 `.html `文件。
+
+3. **运行脚本**:
+   - 脚本读取保存的HTML文件，解析内容，并根据HTML代码中的特定标记识别已关注或取关你的用户。
+   - 脚本将输出取关你的用户列表及其用户ID，并给出总数。
+
+### 先决条件
+
+- Python 3.x
+- 用于HTML解析的`BeautifulSoup4`
+- 用于网络请求的`requests`（如果需要）
+
+使用以下命令安装所需的库：
+
+```bash
+pip install beautifulsoup4 requests
+```
+
+使用方法
+确保已从网页版小红书保存 .html 文件至本地。
+运行脚本：
+
+```bash
+python find_unfollowers.py
+```
+
+脚本将输出取关你的用户列表及其用户ID，并显示取关用户的总数。
