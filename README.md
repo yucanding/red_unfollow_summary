@@ -35,3 +35,9 @@ pip install beautifulsoup4 requests
 Usage
 Ensure the .html file is saved locally from the Xiaohongshu web app.
 Run the script:
+
+```bash
+python find_unfollowers.py
+```
+
+The script will output the list of unfollowers along with their user IDs and the total count of unfollowers.
