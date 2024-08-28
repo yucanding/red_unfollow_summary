@@ -30,6 +30,7 @@ Install required packages using:
 
 ```bash
 pip install beautifulsoup4 requests
+```
 
 Usage
 Ensure the .html file is saved locally from the Xiaohongshu web app.
