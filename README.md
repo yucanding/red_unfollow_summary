@@ -32,7 +32,7 @@ Install required packages using:
 pip install beautifulsoup4 requests
 ```
 
-Usage
+### Usage
 Ensure the .html file is saved locally from the Xiaohongshu web app.
 Run the script:
 
@@ -74,7 +74,7 @@ The script will output the list of unfollowers along with their user IDs and the
 pip install beautifulsoup4 requests
 ```
 
-使用方法
+### 使用方法
 确保已从网页版小红书保存 .html 文件至本地。
 运行脚本：
 
