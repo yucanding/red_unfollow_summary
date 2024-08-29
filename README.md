@@ -9,12 +9,12 @@ This script helps you find all the users who unfollowed you on Xiaohongshu. The 
 ### How It Works
 
 1. **Access Xiaohongshu Web Notifications**:
-   - Open the Xiaohongshu web app and navigate to the **Notifications** section, specifically the "New Followers" tab.
+   - Open the Xiaohongshu web app and navigate to the **Notifications** section, specifically the "New Followers" tab, **keep scrolling down to the bottom of the page to ensure all followers information is fully loaded**.
 
 2. **Copy HTML Code**:
    - Open Chrome Developer Tools (`F12` or `Ctrl + Shift + I`).
    - Locate the HTML code related to the notifications under the `<div class="tabs-content-container">`.
-   - Copy the entire HTML content of this section and save it as a `.html` file on your local machine.
+   - Copy the entire HTML content of this section and save it as a `.html` file on your local machine with the name `red.html`.
 
 3. **Run the Script**:
    - The script reads the saved HTML file, parses the content, and identifies users who have followed or unfollowed you based on specific markers in the HTML code.
@@ -51,12 +51,12 @@ The script will output the list of unfollowers along with their user IDs and the
 ### 工作原理
 
 1. **访问小红书网页通知**:
-   - 打开网页版小红书，导航至**通知**部分，选择“新增关注”标签。
+   - 打开网页版小红书，导航至**通知**部分，选择“新增关注”标签，**不断滑动页面到最底部，确保已加载完毕所有关注者信息**。
 
 2. **复制HTML代码**:
    - 打开Chrome开发者工具（按`F12`或`Ctrl` + `Shift` + `I`）。
    - 找到` <div class="tabs-content-container"> `下的通知相关HTML代码。
-   - 将此部分HTML内容全部复制并保存为本地的 `.html `文件。
+   - 将此部分HTML内容全部复制并保存为本地的 `.html `文件，命名为`red.html`。
 
 3. **运行脚本**:
    - 脚本读取保存的HTML文件，解析内容，并根据HTML代码中的特定标记识别已关注或取关你的用户。
