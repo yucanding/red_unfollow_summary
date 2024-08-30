@@ -9,10 +9,22 @@ This script helps you find all the users who unfollowed you on Xiaohongshu. The 
 ### How It Works
 
 1. **Access Xiaohongshu Web Notifications**:
-   - Open the Xiaohongshu web app and navigate to the **Notifications** section, specifically the "New Followers" tab, **keep scrolling down to the bottom of the page to ensure all followers information is fully loaded**.
+   - Open the Xiaohongshu web app and navigate to the **Notifications** section, specifically the "New Followers" tab, **keep scrolling down to the bottom of the page to ensure all followers information is fully loaded**. You can open Chrome Developer Tools (`F12` or `Ctrl + Shift + I`), enter the following JavaScript code to automatically scroll down the page.
+     ```bash
+     let totalHeight = 0;
+     let distance = 100;
+     let timer = setInterval(() => {
+         let scrollHeight = document.body.scrollHeight;
+         window.scrollBy(0, distance);
+         totalHeight += distance;
+         if(totalHeight >= scrollHeight){
+             clearInterval(timer);
+         }
+     }, 200);
+     ```
 
 2. **Copy HTML Code**:
-   - Open Chrome Developer Tools (`F12` or `Ctrl + Shift + I`).
+   - Open Chrome Developer Tools.
    - Locate the HTML code related to the notifications under the `<div class="tabs-content-container">`.
    - Copy the entire HTML content of this section and save it as a `.html` file on your local machine with the name `red.html`.
 
@@ -51,10 +63,22 @@ The script will output the list of unfollowers along with their user IDs and the
 ### 工作原理
 
 1. **访问小红书网页通知**:
-   - 打开网页版小红书，导航至**通知**部分，选择“新增关注”标签，**不断滑动页面到最底部，确保已加载完毕所有关注者信息**。
+   - 打开网页版小红书，导航至**通知**部分，选择“新增关注”标签，**不断滑动页面到最底部，确保已加载完毕所有关注者信息**。可以在Chrome开发者工具（按`F12`或`Ctrl` + `Shift` + `I`）的Console中输入如下的JavaScript代码进行自动滑动：
+     ```bash
+     let totalHeight = 0;
+     let distance = 100;
+     let timer = setInterval(() => {
+         let scrollHeight = document.body.scrollHeight;
+         window.scrollBy(0, distance);
+         totalHeight += distance;
+         if(totalHeight >= scrollHeight){
+             clearInterval(timer);
+         }
+     }, 200);
+     ```
 
 2. **复制HTML代码**:
-   - 打开Chrome开发者工具（按`F12`或`Ctrl` + `Shift` + `I`）。
+   - 打开Chrome开发者工具。
    - 找到` <div class="tabs-content-container"> `下的通知相关HTML代码。
    - 将此部分HTML内容全部复制并保存为本地的 `.html `文件，命名为`red.html`。
 
