@@ -37,7 +37,7 @@ Ensure the .html file is saved locally from the Xiaohongshu web app.
 Run the script:
 
 ```bash
-python find_unfollowers.py
+python find_unfollower.py
 ```
 
 The script will output the list of unfollowers along with their user IDs and the total count of unfollowers.
@@ -79,7 +79,7 @@ pip install beautifulsoup4 requests
 运行脚本：
 
 ```bash
-python find_unfollowers.py
+python find_unfollower.py
 ```
 
 脚本将输出取关你的用户列表及其用户ID，并显示取关用户的总数。
